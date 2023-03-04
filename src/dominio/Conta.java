@@ -39,16 +39,16 @@ public class Conta {
         System.out.println("Seu nome: "+ cliente.getNome());
         if (tipoConta.equals(TipoConta.PESSOA_FISICA)){
             System.out.println("Seu cpf: "+ cliente.getCpf().substring(0, 3)
-                    + "." + cliente.getCpf().substring(4, 6)
-                    + "." + cliente.getCpf().substring(7, 9) + "-" + cliente.getCpf().substring(10, 11));
+                    + "." + cliente.getCpf().substring(3, 6)
+                    + "." + cliente.getCpf().substring(6, 9) + "-" + cliente.getCpf().substring(9, 11));
         }else {
             System.out.println("Seu cpf: "+ cliente.getCpf().substring(0, 3)
-                    + "." + cliente.getCpf().substring(4, 6)
-                    + "." + cliente.getCpf().substring(7, 9) + "-" + cliente.getCpf().substring(10, 11));
+                    + "." + cliente.getCpf().substring(3, 6)
+                    + "." + cliente.getCpf().substring(6, 9) + "-" + cliente.getCpf().substring(9, 11));
 
             System.out.println("Seu cnpj: "+ cliente.getCnpj().substring(0, 2)
-                    + "." + cliente.getCnpj().substring(3, 5)
-                    + "." + cliente.getCnpj().substring(6, 8) + "/" + cliente.getCnpj().substring(9, 12) + "-" + cliente.getCnpj().substring(13, 14));
+                    + "." + cliente.getCnpj().substring(2, 5)
+                    + "." + cliente.getCnpj().substring(5, 8) + "/" + cliente.getCnpj().substring(8, 12) + "-" + cliente.getCnpj().substring(12, 14));
         }
         System.out.println("Você é do tipo: "+ tipoConta);
         System.out.println("---------------------------------------------");
