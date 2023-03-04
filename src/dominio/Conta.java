@@ -70,8 +70,15 @@ public class Conta {
         return tipoConta;
     }
     public void tranferir(double valor, Cliente cliente){
+        if (cliente.getTipoConta().equals(TipoConta.PESSOA_JURIDICAO)){
+            cliente.depositar(valor - valor * 0.02);
+            cliente.sacar(valor + valor * 0.02);
+            System.out.println("Você pagou uma pequena taxa de dois porcentos(%)");
+        }else {
             cliente.depositar(valor);
             cliente.sacar(valor);
+        }
+
     }
     public void depositar(double valor){
         if (valor > 0){
